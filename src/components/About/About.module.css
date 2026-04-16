@@ -1,0 +1,123 @@
+.about {
+  padding: var(--section-padding);
+  background: var(--color-bg-alt);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+/* Text block */
+.textBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.lead {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--color-text);
+  line-height: 1.75;
+}
+
+.body {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  line-height: 1.85;
+}
+
+.techRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.techPill {
+  padding: 0.3rem 0.85rem;
+  border-radius: 100px;
+  border: 1.5px solid var(--color-border);
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  transition: all var(--transition);
+}
+
+.techPill:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+/* Stats block */
+.statsBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.statCard {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  border: 1.5px solid var(--color-border);
+  transition: border-color var(--transition), transform var(--transition);
+}
+
+.statCard:hover {
+  border-color: var(--color-accent);
+  transform: translateY(-3px);
+}
+
+.statValue {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--color-accent);
+  line-height: 1;
+}
+
+.statLabel {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-top: 0.4rem;
+}
+
+.highlightCard {
+  display: flex;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--color-accent-light);
+  border: 1.5px solid var(--color-accent);
+  border-radius: var(--radius-lg);
+  align-items: flex-start;
+}
+
+.highlightCard i {
+  color: var(--color-accent);
+  font-size: 0.9rem;
+  margin-top: 0.2rem;
+  flex-shrink: 0;
+}
+
+.highlightCard p {
+  font-size: 0.875rem;
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 860px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
